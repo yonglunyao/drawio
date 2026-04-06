@@ -1,0 +1,159 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="K4QqMoCzYOv-MwfpPYgG">
+    <mxGraphModel dx="1432" dy="689" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="640" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=0;align=center;verticalAlign=middle;resizable=0;points=[];autosize=0;fontSize=16;fontStyle=1;fontColor=#1E293B;" value="鸿蒙真机沙箱 — 插件化架构" vertex="1">
+          <mxGeometry height="32" width="460" x="90" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-r" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#DCFCE7;strokeColor=#16A34A;fontColor=#15803D;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=3;arcSize=8;" value="渲染进程" vertex="1">
+          <mxGeometry height="128" width="624" x="8" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="react" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#16A34A;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="React App&#xa;主界面" vertex="1">
+          <mxGeometry height="46" width="136" x="56" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="slotreg" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#16A34A;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="SlotRegistry&#xa;槽位注册" vertex="1">
+          <mxGeometry height="46" width="136" x="208" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="slotrend" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#16A34A;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="SlotRenderer&#xa;渲染插件UI" vertex="1">
+          <mxGeometry height="46" width="148" x="360" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="wv1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FEF9C3;strokeColor=#CA8A04;fontColor=#713F12;fontSize=10;" value="MITM插件&#xa;iframe" vertex="1">
+          <mxGeometry height="36" width="112" x="112" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="wv2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FEF9C3;strokeColor=#CA8A04;fontColor=#713F12;fontSize=10;" value="投屏插件&#xa;iframe" vertex="1">
+          <mxGeometry height="36" width="112" x="240" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="wv3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FEF9C3;strokeColor=#CA8A04;fontColor=#713F12;fontSize=10;dashed=1;" value="+ 你的插件&#xa;iframe" vertex="1">
+          <mxGeometry height="36" width="112" x="368" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="re1" edge="1" parent="1" source="react" style="endArrow=classic;endFill=1;strokeColor=#16A34A;strokeWidth=1.5;" target="slotreg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="re2" edge="1" parent="1" source="slotreg" style="endArrow=classic;endFill=1;strokeColor=#16A34A;strokeWidth=1.5;" target="slotrend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="re3" edge="1" parent="1" source="slotrend" style="endArrow=classic;endFill=1;strokeColor=#CA8A04;strokeWidth=1;" target="wv1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="re4" edge="1" parent="1" source="wv1" style="endArrow=classic;endFill=1;strokeColor=#CA8A04;strokeWidth=1;" target="wv2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="re5" edge="1" parent="1" source="wv2" style="endArrow=classic;endFill=1;strokeColor=#CA8A04;strokeWidth=1;dashed=1;" target="wv3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xipc" edge="1" parent="1" source="mod-m" style="endArrow=classic;startArrow=classic;startFill=1;endFill=1;strokeColor=#16A34A;strokeWidth=2;exitX=0;exitY=0.3;entryX=0;entryY=0.7;" target="mod-r">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-24" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xipc-l" connectable="0" parent="xipc" style="edgeLabel;html=0;fontSize=10;fontColor=#16A34A;fontStyle=1;" value="IPC" vertex="1">
+          <mxGeometry relative="1" x="0.1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="api-bar" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#92400E;fontSize=11;fontStyle=1;arcSize=16;" value="PluginContext API — 框架与插件唯一契约&#xa;device | ui | events | config | exec | fs | logger" vertex="1">
+          <mxGeometry height="40" width="624" x="8" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-m" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#1D4ED8;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=3;arcSize=8;" value="主进程 (Electron Main)" vertex="1">
+          <mxGeometry height="168" width="624" x="8" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="core" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="FrameworkCore&#xa;生命周期/DI" vertex="1">
+          <mxGeometry height="46" width="152" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pmgr" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="PluginManager&#xa;发现/激活" vertex="1">
+          <mxGeometry height="46" width="152" x="208" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="phsrv" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="PluginHostServer&#xa;WebSocket :9000" vertex="1">
+          <mxGeometry height="46" width="164" x="376" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="devsvc" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=10;" value="DeviceService&#xa;HDC设备" vertex="1">
+          <mxGeometry height="40" width="120" x="56" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="evtsvc" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=10;" value="EventService&#xa;事件总线" vertex="1">
+          <mxGeometry height="40" width="120" x="192" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="cfgsvc" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=10;" value="ConfigService&#xa;配置管理" vertex="1">
+          <mxGeometry height="40" width="120" x="328" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="uisvc" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#2563EB;fontColor=#1E293B;fontSize=10;" value="UIService&#xa;UI控制" vertex="1">
+          <mxGeometry height="40" width="100" x="464" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="hdc" parent="1" style="shape=cloud;whiteSpace=wrap;html=0;fillColor=#F1F5F9;strokeColor=#64748B;fontColor=#475569;fontSize=9;" value="HDC 鸿蒙设备" vertex="1">
+          <mxGeometry height="36" width="108" x="56" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="cfgf" parent="1" style="shape=document;whiteSpace=wrap;html=0;fillColor=#FFF8E1;strokeColor=#F9AB00;fontColor=#202124;fontSize=9;" value="config.json" vertex="1">
+          <mxGeometry height="36" width="96" x="180" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="me1" edge="1" parent="1" source="core" style="endArrow=classic;endFill=1;strokeColor=#2563EB;strokeWidth=1.5;" target="pmgr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="me2" edge="1" parent="1" source="pmgr" style="endArrow=classic;endFill=1;strokeColor=#2563EB;strokeWidth=1.5;" target="phsrv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="me3" edge="1" parent="1" source="devsvc" style="endArrow=classic;endFill=1;strokeColor=#94A3B8;strokeWidth=1;" target="hdc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="me4" edge="1" parent="1" source="cfgsvc" style="endArrow=classic;endFill=1;strokeColor=#94A3B8;strokeWidth=1;" target="cfgf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="me5" edge="1" parent="1" source="pmgr" style="endArrow=classic;endFill=1;strokeColor=#93C5FD;strokeWidth=1;dashed=1;" target="devsvc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="me6" edge="1" parent="1" source="pmgr" style="endArrow=classic;endFill=1;strokeColor=#93C5FD;strokeWidth=1;dashed=1;" target="evtsvc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="me7" edge="1" parent="1" source="pmgr" style="endArrow=classic;endFill=1;strokeColor=#93C5FD;strokeWidth=1;dashed=1;" target="cfgsvc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xws" edge="1" parent="1" source="mod-m" style="endArrow=classic;endFill=1;strokeColor=#2563EB;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="mod-e">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xws-l" connectable="0" parent="xws" style="edgeLabel;html=0;fontSize=10;fontColor=#2563EB;fontStyle=1;" value="WebSocket&#xa;激活/RPC" vertex="1">
+          <mxGeometry relative="1" x="0.1" as="geometry">
+            <mxPoint x="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mod-e" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EDE9FE;strokeColor=#7C3AED;fontColor=#6D28D9;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=3;arcSize=8;" value="插件宿主进程 (Extension Host)" vertex="1">
+          <mxGeometry height="168" width="624" x="8" y="466" as="geometry" />
+        </mxCell>
+        <mxCell id="exhost" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#7C3AED;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="ExtensionHost&#xa;进程管理" vertex="1">
+          <mxGeometry height="46" width="176" x="56" y="494" as="geometry" />
+        </mxCell>
+        <mxCell id="sandbox" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF;strokeColor=#7C3AED;fontColor=#1E293B;fontSize=11;fontStyle=1;" value="PluginSandbox&#xa;沙箱隔离/API注入" vertex="1">
+          <mxGeometry height="46" width="188" x="248" y="494" as="geometry" />
+        </mxCell>
+        <mxCell id="pc-note" parent="1" style="text;html=0;align=left;verticalAlign=middle;fontSize=10;fontColor=#059669;fontStyle=2;" value="▲ 插件通过 PluginContext API 安全访问框架能力" vertex="1">
+          <mxGeometry height="18" width="310" x="56" y="548" as="geometry" />
+        </mxCell>
+        <mxCell id="pa" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F5F3FF;strokeColor=#7C3AED;fontColor=#5B21B6;fontSize=10;" value="MITM插件&#xa;独立进程" vertex="1">
+          <mxGeometry height="42" width="128" x="96" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="pb" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F5F3FF;strokeColor=#7C3AED;fontColor=#5B21B6;fontSize=10;" value="投屏插件&#xa;独立进程" vertex="1">
+          <mxGeometry height="42" width="128" x="240" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="pc" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F5F3FF;strokeColor=#7C3AED;fontColor=#5B21B6;fontSize=10;dashed=1;" value="+ 你的插件&#xa;崩溃隔离" vertex="1">
+          <mxGeometry height="42" width="128" x="384" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="ee1" edge="1" parent="1" source="exhost" style="endArrow=classic;endFill=1;strokeColor=#7C3AED;strokeWidth=1.5;" target="sandbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ee2" edge="1" parent="1" source="pa" style="endArrow=classic;endFill=1;strokeColor=#059669;strokeWidth=1.5;" target="sandbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ee3" edge="1" parent="1" source="pb" style="endArrow=classic;endFill=1;strokeColor=#059669;strokeWidth=1.5;" target="sandbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ee4" edge="1" parent="1" source="pc" style="endArrow=classic;endFill=1;strokeColor=#059669;strokeWidth=1.5;dashed=1;" target="sandbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=0;align=left;verticalAlign=middle;fontSize=9;fontColor=#475569;" value="━ IPC通信  ━ WebSocket RPC  ━ PluginContext API  ┄ 可扩展" vertex="1">
+          <mxGeometry height="18" width="624" x="8" y="650" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
